@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Insurance Agency - Services</title>
+    <link rel="stylesheet" href="../assets/css/services_styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        /* Custom Styles for Services Page */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f2f6fd;
+        }
+        
+        header {
+            background-color: #333;
+            padding: 20px;
+        }
+        
+        .logo {
+            color: #fff;
+            font-size: 1.5em;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        
+        .logo:hover {
+            color: #ffd700;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+        
+        nav ul li {
+            margin: 0 10px;
+            list-style: none;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            position: relative; /* Add this to position the underline relative to the link */
+        }
+
+        nav ul li a::before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #ffd700;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .services-section {
+            background-color: #fff;
+            padding: 100px 0;
+            text-align: center;
+            color: #333;
+        }
+        
+        .services-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            animation: animate__fadeInDown 1s;
+        }
+        
+        .services-section p {
+            font-size: 1.5em;
+            margin-bottom: 40px;
+            animation: animate__fadeInUp 1s;
+        }
+        
+        .service-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        
+        .service-item {
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            overflow: hidden;
+            animation: animate__zoomIn 1s;
+        }
+        
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-item a {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            text-decoration: none;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .service-item h3 {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+        
+        .service-item p {
+            font-size: 1em;
+            line-height: 1.4;
+        }
+
+        /* Additional Styles from services_styles.css */
+        body, h1, h2, h3, p, ul, li {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            padding: 0;
+        }
+
+        /* Navigation styles */
+        header {
+            position: fixed;
+            width: 100%;
+            background-color: #333;
+            padding: 10px 0;
+            z-index: 9999;
+        }
+
+        header .logo {
+            float: left;
+            margin-left: 50px;
+            color: #fff;
+            font-size: 1.5em;
+        }
+
+        nav ul {
+            float: right;
+            margin-right: 50px;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="path/to/your-logo.png" alt="Your Insurance Agency Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="client_portal.html">Client Portal</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="services-section">
+            <div class="container">
+                <h2 class="animate__animated animate__fadeIn">Services We Offer</h2>
+                <p class="animate__animated animate__fadeInUp">Explore our range of insurance services</p>
+                <div class="service-items">
+                    <div class="service-item animate__animated animate__fadeIn">
+                        <a href="service1.html">
+                            <h3>Auto Insurance</h3>
+                            <p>Protect your vehicle and stay on the road with our comprehensive auto insurance coverage.</p>
+                        </a>
+                    </div>
+                    <div class="service-item animate__animated animate__fadeIn">
+                        <a href="service2.html">
+                            <h3>Home Insurance</h3>
+                            <p>Secure your home and belongings with our reliable home insurance solutions.</p>
+                        </a>
+                    </div>
+                    <div class="service-item animate__animated animate__fadeIn">
+                        <a href="service3.html">
+                            <h3>Health Insurance</h3>
+                            <p>Take care of yourself and your loved ones with our affordable health insurance plans.</p>
+                        </a>
+                    </div>
+                    <div class="service-item animate__animated animate__fadeIn">
+                        <a href="service4.html">
+                            <h3>Travel Insurance</h3>
+                            <p>Ensure a worry-free journey with our comprehensive travel insurance coverage.</p>
+                        </a>
+                    </div>
+                    <div class="service-item animate__animated animate__fadeIn">
+                        <a href="service5.html">
+                            <h3>Business Insurance</h3>
+                            <p>Protect your business and minimize risks with our tailored business insurance solutions.</p>
+                        </a>
+                    </div>
+                    <div class="service-item animate__animated animate__fadeIn">
+                        <a href="service6.html">
+                            <h3>Life Insurance</h3>
+                            <p>Secure your family's financial future with our reliable life insurance plans.</p>
+                        </a>
+                    </div>
+                    <!-- Add more service items as needed -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>© 2023 Your Insurance Agency</p>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+</html>

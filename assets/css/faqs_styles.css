@@ -52,20 +52,12 @@ nav ul li a:hover {
 }
 
 /* Main content styles */
-section {
+.about {
     margin-top: 100px;
     text-align: center;
     padding: 50px 0;
     background-color: #fff;
     font-size: 1.2em;
-}
-
-.home {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 h1, h2 {
@@ -124,7 +116,7 @@ footer {
     }
 
     /* Adjust layout */
-    .home {
+    .about {
         padding: 20px;
     }
 }

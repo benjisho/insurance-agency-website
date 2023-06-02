@@ -1,30 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Insurance Agency</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        /* Custom Styles for Home Page */
+        .hero-section {
+            background-image: url('path/to/hero-background-image.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 100px 0;
+            text-align: center;
+        }
+        .hero-section h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .hero-section p {
+            font-size: 1.5em;
+            margin-bottom: 40px;
+        }
+        .call-to-action {
+            background-color: #333;
+            padding: 60px 0;
+            text-align: center;
+            color: #fff;
+        }
+        .call-to-action h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .call-to-action p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+        .feature-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        .feature-box img {
+            max-width: 200px;
+            margin-right: 30px;
+        }
+        .feature-box h3 {
+            font-size: 1.8em;
+        }
+        .feature-box p {
+            font-size: 1.2em;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="logo">Your Insurance Agency</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pages/about.html">About</a></li>
-                <li><a href="pages/services.html">Services</a></li>
-                <li><a href="pages/faqs.html">FAQs</a></li>
-                <li><a href="pages/contact.html">Contact</a></li>
-                <li><a href="pages/client_portal.html">Client Portal</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1 class="logo">Your Insurance Agency</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="pages/about.html">About</a></li>
+                    <li><a href="pages/services.html">Services</a></li>
+                    <li><a href="pages/faqs.html">FAQs</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
+                    <li><a href="pages/client_portal.html">Client Portal</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <section class="home">
-        <h2 class="animate__animated animate__fadeIn">Welcome to Our Insurance Agency</h2>
-        <p class="animate__animated animate__fadeInUp">Your trusted provider for all your insurance needs...</p>
-    </section>
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <h1 class="animate__animated animate__fadeIn">Welcome to Our Insurance Agency</h1>
+                <p class="animate__animated animate__fadeInUp">We provide top-notch insurance services...</p>
+            </div>
+        </section>
+        <section class="call-to-action">
+            <div class="container">
+                <h2>Why Choose Us?</h2>
+                <p>We are dedicated to providing exceptional insurance solutions...</p>
+                <div class="feature-box">
+                    <img src="path/to/feature-icon-1.png" alt="Feature Icon 1">
+                    <div>
+                        <h3>Experience</h3>
+                        <p>With over 20 years of industry experience, we know insurance inside out.</p>
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <img src="path/to/feature-icon-2.png" alt="Feature Icon 2">
+                    <div>
+                        <h3>Customized Solutions</h3>
+                        <p>We tailor our insurance policies to meet the unique needs of each client.</p>
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <img src="path/to/feature-icon-3.png" alt="Feature Icon 3">
+                    <div>
+                        <h3>Exceptional Service</h3>
+                        <p>Our dedicated team is committed to providing exceptional service and support.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
     <footer>
-        <p>© 2023 Your Insurance Agency</p>
+        <div class="container">
+            <p>© 2023 Your Insurance Agency</p>
+        </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 </html>

@@ -1,23 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Insurance Agency - FAQs</title>
+    <link rel="stylesheet" href="../assets/css/faqs_styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        /* Custom Styles for FAQ Page */
+        .faq-section {
+            background-color: #f4f4f4;
+            padding: 100px 0;
+            text-align: center;
+            color: #333;
+        }
+        .faq-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .faq-section p {
+            font-size: 1.5em;
+            margin-bottom: 40px;
+        }
+        .faq-item {
+            max-width: 600px;
+            margin: 0 auto 20px;
+            text-align: left;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .faq-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .faq-item h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+        .faq-item p {
+            font-size: 1.2em;
+        }
+    </style>
+</head>
 <body>
     <header>
-        <div class="logo">Your Insurance Agency</div>
+        <div class="logo">
+            <img src="path/to/your-logo.png" alt="Your Insurance Agency Logo">
+        </div>
         <nav>
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/services">Services</a></li>
-                <li><a href="/faqs">FAQs</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="client_portal.html">Client Portal</a></li>
             </ul>
         </nav>
     </header>
-    <section class="faqs">
-        <h2 class="animate__animated animate__fadeIn">Frequently Asked Questions</h2>
-        <div id="faqsList" class="animate__animated animate__fadeInUp">
-            <!-- FAQs will be loaded here via JavaScript -->
-        </div>
-    </section>
+    <main>
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="animate__animated animate__fadeIn">Frequently Asked Questions</h2>
+                <p class="animate__animated animate__fadeInUp">Have a question? We're here to help...</p>
+                <div class="faq-items">
+                    <div class="faq-item">
+                        <h3>Question 1</h3>
+                        <p>Answer to Question 1</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Question 2</h3>
+                        <p>Answer to Question 2</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Question 3</h3>
+                        <p>Answer to Question 3</p>
+                    </div>
+                    <!-- Add more FAQ items as needed -->
+                </div>
+            </div>
+        </section>
+    </main>
     <footer>
-        <p>© 2023 Your Insurance Agency</p>
+        <div class="container">
+            <p>© 2023 Your Insurance Agency</p>
+        </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
+</html>

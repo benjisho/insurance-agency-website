@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Insurance Agency - Client Portal</title>
+    <link rel="stylesheet" href="../assets/css/client_portal_styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        /* Custom Styles for Client Portal Page */
+        .client-portal-section {
+            background-color: #f4f4f4;
+            padding: 100px 0;
+            text-align: center;
+            color: #333;
+        }
+        .client-portal-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .client-portal-section p {
+            font-size: 1.5em;
+            margin-bottom: 40px;
+        }
+        .client-login {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .client-login label {
+            font-size: 1.2em;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .client-login input {
+            width: 100%;
+            padding: 10px;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        .client-login button {
+            background-color: #333;
+            color: #fff;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .client-login button:hover {
+            background-color: #555;
+        }
+        .user-dashboard {
+            display: none;
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .user-dashboard h3 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .user-dashboard button {
+            background-color: #333;
+            color: #fff;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .user-dashboard button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Your Insurance Agency</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="client_portal.html">Client Portal</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="client-portal-section">
+            <div class="container">
+                <h2 class="animate__animated animate__fadeIn">Client Portal</h2>
+                <p class="animate__animated animate__fadeInUp">Access your account...</p>
+                <div class="client-login">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Your Username">
+
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Your Password">
+
+                    <button id="loginButton">Login</button>
+                </div>
+                <div class="user-dashboard">
+                    <h3>Welcome, <span id="usernameDisplay"></span>!</h3>
+                    <button id="logoutButton">Logout</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>© 2023 Your Insurance Agency</p>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        // Custom JavaScript for Client Portal Page
+        $(document).ready(function() {
+            $('#loginButton').click(function() {
+                var username = $('#username').val();
+                var password = $('#password').val();
+                
+                // Simulating server-side validation
+                if (username === 'client' && password === 'password') {
+                    $('.client-login').hide();
+                    $('.user-dashboard').show();
+                    $('#usernameDisplay').text(username);
+                } else {
+                    alert('Invalid credentials. Please try again.');
+                }
+            });
+
+            $('#logoutButton').click(function() {
+                $('.client-login').show();
+                $('.user-dashboard').hide();
+                $('#username').val('');
+                $('#password').val('');
+            });
+        });
+    </script>
+</body>
+</html>

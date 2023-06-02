@@ -12,10 +12,67 @@
         
         body {
             font-family: 'Montserrat', sans-serif;
+            background-color: #f2f6fd;
+        }
+        
+        header {
+            background-color: #333;
+            padding: 20px;
+        }
+        
+        .logo {
+            color: #fff;
+            font-size: 1.5em;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        
+        .logo:hover {
+            color: #ffd700;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+        
+        nav ul li {
+            margin: 0 10px;
+            list-style: none;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+        
+        nav ul li a::before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #ffd700;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        nav ul li a:hover::before {
+            transform: scaleX(1);
         }
         
         .services-section {
-            background-color: #f4f4f4;
+            background-color: #fff;
             padding: 100px 0;
             text-align: center;
             color: #333;
@@ -24,11 +81,13 @@
         .services-section h2 {
             font-size: 2.5em;
             margin-bottom: 20px;
+            animation: animate__fadeInDown 1s;
         }
         
         .services-section p {
             font-size: 1.5em;
             margin-bottom: 40px;
+            animation: animate__fadeInUp 1s;
         }
         
         .service-items {
@@ -48,6 +107,7 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             overflow: hidden;
+            animation: animate__zoomIn 1s;
         }
         
         .service-item:hover {
@@ -63,6 +123,7 @@
             height: 100%;
             text-decoration: none;
             padding: 20px;
+            color: #333;
         }
         
         .service-item h3 {
@@ -79,17 +140,17 @@
 </head>
 <body>
     <header>
-        <div class="logo">
+        <div class="logo animate__animated animate__fadeIn">
             <img src="path/to/your-logo.png" alt="Your Insurance Agency Logo">
         </div>
         <nav>
             <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="faqs.html">FAQs</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="client_portal.html">Client Portal</a></li>
+                <li><a href="../index.html" class="animate__animated animate__fadeIn">Home</a></li>
+                <li><a href="about.html" class="animate__animated animate__fadeIn">About</a></li>
+                <li><a href="services.html" class="animate__animated animate__fadeIn">Services</a></li>
+                <li><a href="faqs.html" class="animate__animated animate__fadeIn">FAQs</a></li>
+                <li><a href="contact.html" class="animate__animated animate__fadeIn">Contact</a></li>
+                <li><a href="client_portal.html" class="animate__animated animate__fadeIn">Client Portal</a></li>
             </ul>
         </nav>
     </header>
@@ -99,37 +160,37 @@
                 <h2 class="animate__animated animate__fadeIn">Services We Offer</h2>
                 <p class="animate__animated animate__fadeInUp">Explore our range of insurance services</p>
                 <div class="service-items">
-                    <div class="service-item">
+                    <div class="service-item animate__animated animate__fadeIn">
                         <a href="service1.html">
                             <h3>Auto Insurance</h3>
                             <p>Protect your vehicle and stay on the road with our comprehensive auto insurance coverage.</p>
                         </a>
                     </div>
-                    <div class="service-item">
+                    <div class="service-item animate__animated animate__fadeIn">
                         <a href="service2.html">
                             <h3>Home Insurance</h3>
                             <p>Secure your home and belongings with our reliable home insurance solutions.</p>
                         </a>
                     </div>
-                    <div class="service-item">
+                    <div class="service-item animate__animated animate__fadeIn">
                         <a href="service3.html">
                             <h3>Health Insurance</h3>
                             <p>Take care of yourself and your loved ones with our affordable health insurance plans.</p>
                         </a>
                     </div>
-                    <div class="service-item">
+                    <div class="service-item animate__animated animate__fadeIn">
                         <a href="service4.html">
                             <h3>Travel Insurance</h3>
                             <p>Ensure a worry-free journey with our comprehensive travel insurance coverage.</p>
                         </a>
                     </div>
-                    <div class="service-item">
+                    <div class="service-item animate__animated animate__fadeIn">
                         <a href="service5.html">
                             <h3>Business Insurance</h3>
                             <p>Protect your business and minimize risks with our tailored business insurance solutions.</p>
                         </a>
                     </div>
-                    <div class="service-item">
+                    <div class="service-item animate__animated animate__fadeIn">
                         <a href="service6.html">
                             <h3>Life Insurance</h3>
                             <p>Secure your family's financial future with our reliable life insurance plans.</p>

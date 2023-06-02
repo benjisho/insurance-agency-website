@@ -47,14 +47,10 @@
             color: #fff;
             text-decoration: none;
             font-size: 1em;
-            position: relative;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
+            position: relative; /* Add this to position the underline relative to the link */
         }
-        
-        nav ul li a:hover {
-            color: #ffd700;
-        }
-        
+
         nav ul li a::before {
             content: '';
             position: absolute;
@@ -66,7 +62,12 @@
             transform: scaleX(0);
             transition: transform 0.3s ease;
         }
-        
+
+        nav ul li a:hover {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
         nav ul li a:hover::before {
             transform: scaleX(1);
         }
@@ -136,21 +137,74 @@
             font-size: 1em;
             line-height: 1.4;
         }
+
+        /* Additional Styles from services_styles.css */
+        body, h1, h2, h3, p, ul, li {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            padding: 0;
+        }
+
+        /* Navigation styles */
+        header {
+            position: fixed;
+            width: 100%;
+            background-color: #333;
+            padding: 10px 0;
+            z-index: 9999;
+        }
+
+        header .logo {
+            float: left;
+            margin-left: 50px;
+            color: #fff;
+            font-size: 1.5em;
+        }
+
+        nav ul {
+            float: right;
+            margin-right: 50px;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo animate__animated animate__fadeIn">
+        <div class="logo">
             <img src="path/to/your-logo.png" alt="Your Insurance Agency Logo">
         </div>
         <nav>
             <ul>
-                <li><a href="../index.html" class="animate__animated animate__fadeIn">Home</a></li>
-                <li><a href="about.html" class="animate__animated animate__fadeIn">About</a></li>
-                <li><a href="services.html" class="animate__animated animate__fadeIn">Services</a></li>
-                <li><a href="faqs.html" class="animate__animated animate__fadeIn">FAQs</a></li>
-                <li><a href="contact.html" class="animate__animated animate__fadeIn">Contact</a></li>
-                <li><a href="client_portal.html" class="animate__animated animate__fadeIn">Client Portal</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="client_portal.html">Client Portal</a></li>
             </ul>
         </nav>
     </header>

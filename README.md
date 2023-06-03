@@ -13,16 +13,21 @@ Welcome to the repository for the Your Insurance Agency website. This repository
   - **about.html**: About page providing information about the company.
   - **services.html**: Page showcasing the services offered by the agency.
   - **faqs.html**: Frequently Asked Questions page.
-  - **contact.html**: Contact page for users to get in touch.
+  - **contact.php**: Contact page with a PHP form for sending messages.
   - **client_portal.html**: Client portal page for accessing user accounts.
+  - **thank_you.html**: Thank you page displayed after submitting the contact form.
+- **php/**: Directory for PHP files related to the website.
+  - **send_email.php**: PHP script for sending contact form submissions via email.
 - **README.md**: This file providing an overview of the repository and its contents.
+- **docker/**: Directory for Docker-related files.
+  - **Dockerfile**: Dockerfile for building a containerized version of the website.
 
 ## Getting Started
 
 To get started with the website, follow these steps:
 
 1. Clone the repository to your local machine:
-`git clone https://github.com/your-username/your-insurance-agency.git`
+`git clone https://github.com/benjisho/insurance-agency-website.git`
 
 2. Open the files in your preferred code editor.
 3. Make changes to the HTML, CSS, or JavaScript files as needed.
@@ -45,3 +50,4 @@ Feel free to customize and adapt this website to meet your specific needs. If yo
 ---
 
 Thank you for using Your Insurance Agency Website! If you have any feedback or suggestions, please let us know.
+

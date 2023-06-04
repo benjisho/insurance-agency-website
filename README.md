@@ -64,7 +64,7 @@ To run the website using Docker Compose, follow these steps:
 2. Navigate to the project directory containing the `docker-compose.yml` file.
 
 3. Run the Docker Compose command to start the containers:
-`docker-compose up -d`
+`docker-compose -f docker/docker-compose.yml up -d`
 
 4. Access the website in your browser at `http://localhost:8080`.
 

@@ -43,6 +43,8 @@ git push
 
 ## Running with Docker
 
+### Docker
+
 To run the website using Docker, follow these steps:
 
 1. Install Docker on your machine (https://www.docker.com/get-started).
@@ -51,6 +53,19 @@ To run the website using Docker, follow these steps:
 `docker build -t insurance-agency-website -f docker/Dockerfile .`
 3. Run the Docker container:
 `docker run -d -p 8080:80 --name insurance-website-container insurance-agency-website`
+4. Access the website in your browser at `http://localhost:8080`.
+
+### Docker Compose
+
+To run the website using Docker Compose, follow these steps:
+
+1. Install Docker Compose on your machine (https://docs.docker.com/compose/install/).
+
+2. Navigate to the project directory containing the `docker-compose.yml` file.
+
+3. Run the Docker Compose command to start the containers:
+`docker-compose up -d`
+
 4. Access the website in your browser at `http://localhost:8080`.
 
 ## License

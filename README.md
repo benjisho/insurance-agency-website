@@ -41,6 +41,18 @@ git push
 ```
 7. Deploy your changes to your web server or hosting platform.
 
+## Running with Docker
+
+To run the website using Docker, follow these steps:
+
+1. Install Docker on your machine (https://www.docker.com/get-started).
+
+2. Build the Docker image:
+`docker build -t insurance-agency-website -f docker/Dockerfile .`
+3. Run the Docker container:
+`docker run -d -p 8080:80 --name insurance-website-container insurance-agency-website`
+4. Access the website in your browser at `http://localhost:8080`.
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).

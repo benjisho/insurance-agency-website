@@ -21,6 +21,10 @@ Welcome to the repository for the Your Insurance Agency website. This repository
 - **README.md**: This file providing an overview of the repository and its contents.
 - **docker/**: Directory for Docker-related files.
   - **Dockerfile**: Dockerfile for building a containerized version of the website.
+  - **docker-compose.yml**: Docker Compose configuration for running the containers.
+- **kubernetes/**: Directory for Kubernetes-related files.
+  - **deployment.yaml**: Kubernetes deployment configuration for the website.
+  - **service.yaml**: Kubernetes service configuration for the website.
 
 ## Getting Started
 
@@ -67,6 +71,21 @@ To run the website using Docker Compose, follow these steps:
 `docker-compose -f docker/docker-compose.yml up -d`
 
 4. Access the website in your browser at `http://localhost:8080`.
+
+## Running with Kubernetes
+
+To run the website using Kubernetes, follow these steps:
+
+1. Install and set up Kubernetes on your machine or use a Kubernetes cluster provider.
+
+2. Navigate to the project directory containing the Kubernetes files.
+
+3. Deploy the website using the Kubernetes deployment and service files:
+```
+kubectl apply -f kubernetes/deployment.yaml
+kubectl apply -f kubernetes/service.yaml
+```
+4. Access the website through the Kubernetes service using the assigned external IP or domain.
 
 ## License
 

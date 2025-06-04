@@ -12,6 +12,12 @@ Welcome to the repository for the Your Insurance Agency website. This repository
 - **pages/**: Directory for additional pages of the website.
   - **about.html**: About page providing information about the company.
   - **services.html**: Page showcasing the services offered by the agency.
+  - **service1.html**: Detailed page for Auto Insurance.
+  - **service2.html**: Detailed page for Home Insurance.
+  - **service3.html**: Detailed page for Health Insurance.
+  - **service4.html**: Detailed page for Travel Insurance.
+  - **service5.html**: Detailed page for Business Insurance.
+  - **service6.html**: Detailed page for Life Insurance.
   - **faqs.html**: Frequently Asked Questions page.
   - **contact.php**: Contact page with a PHP form for sending messages.
   - **client_portal.html**: Client portal page for accessing user accounts.

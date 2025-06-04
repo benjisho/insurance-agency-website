@@ -1,8 +1,5 @@
 FROM php:7.4-apache
 
-# Set Apache configuration to use HTTP 1.1
-RUN echo "ServerProtocol HTTP/1.1" >> /etc/apache2/apache2.conf
-
 WORKDIR /var/www/html
 
 # Copy index.html and relevant directories

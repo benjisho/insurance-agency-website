@@ -286,7 +286,7 @@
                     <button id="loginButton">Login</button>
                 </div>
                 <div class="user-dashboard">
-                    <h3>Welcome, <span id="usernameDisplay"></span>!</h3>
+                    <h3 id="welcomeMessage"></h3>
                     <button id="logoutButton">Logout</button>
                 </div>
             </div>
@@ -298,18 +298,18 @@
         </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../assets/js/client_portal_auth.js"></script>
     <script>
         // Custom JavaScript for Client Portal Page
         $(document).ready(function() {
             $('#loginButton').click(function() {
                 var username = $('#username').val();
                 var password = $('#password').val();
-                
-                // Simulating server-side validation
-                if (username === 'client' && password === 'password') {
+
+                if (window.clientPortalAuth.validateCredentials(username, password)) {
                     $('.client-login').hide();
                     $('.user-dashboard').show();
-                    $('#usernameDisplay').text(username);
+                    $('#welcomeMessage').text(window.clientPortalAuth.buildWelcomeMessage(username));
                 } else {
                     alert('Invalid credentials. Please try again.');
                 }
@@ -320,6 +320,7 @@
                 $('.user-dashboard').hide();
                 $('#username').val('');
                 $('#password').val('');
+                $('#welcomeMessage').text('');
             });
         });
     </script>

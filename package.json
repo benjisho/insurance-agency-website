@@ -1,0 +1,7 @@
+{
+  "name": "insurance-agency-website",
+  "private": true,
+  "scripts": {
+    "test:js": "node --test tests/js/*.test.js"
+  }
+}

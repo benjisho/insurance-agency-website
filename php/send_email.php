@@ -1,22 +1,50 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST['name']; // Retrieve the value of the 'name' field from the form
-    $email = $_POST['email']; // Retrieve the value of the 'email' field from the form
-    $message = $_POST['message']; // Retrieve the value of the 'message' field from the form
 
-    // Set up the email parameters
-    $to = "bennyshohat@example.com"; // Update with your email address
-    $subject = "New Contact Form Submission"; // Subject of the email
-    $body = "Name: " . $name . "\n"; // Body of the email, includes the name
-    $body .= "Email: " . $email . "\n"; // Append the email to the body
-    $body .= "Message: " . $message . "\n"; // Append the message to the body
+declare(strict_types=1);
 
-    // Send the email
-    $headers = "From: " . $email . "\r\n" . "Reply-To: " . $email . "\r\n";
-    mail($to, $subject, $body, $headers); // Send the email with the specified parameters
+require_once __DIR__ . '/contact_form_handler.php';
 
-    // Redirect the user to a thank you page
-    header("Location: ../pages/thank_you.html"); // Update the path to the thank_you.html file
+function text_response(string $message, int $status): void
+{
+    http_response_code($status);
+    header('Content-Type: text/plain; charset=UTF-8');
+    echo $message;
+}
+
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    header('Allow: POST');
+    text_response('Method Not Allowed', 405);
     exit();
 }
-?>
+
+$contact = normalize_contact_input($_POST);
+$errors = validate_contact_input($contact);
+
+if (!empty($errors)) {
+    text_response(implode(' ', $errors), 422);
+    exit();
+}
+
+$payload = build_contact_email_payload($contact);
+$to = getenv('CONTACT_TO_EMAIL') ?: 'bennyshohat@example.com';
+
+if (filter_var($to, FILTER_VALIDATE_EMAIL) === false) {
+    text_response('Server email configuration is invalid.', 500);
+    exit();
+}
+
+$from = getenv('CONTACT_FROM_EMAIL') ?: 'noreply@example.com';
+if (filter_var($from, FILTER_VALIDATE_EMAIL) === false) {
+    $from = 'noreply@example.com';
+}
+
+$headers = 'From: ' . $from . "\r\n"
+    . 'Reply-To: ' . $payload['reply_to'] . "\r\n";
+
+if (!mail($to, $payload['subject'], $payload['body'], $headers)) {
+    text_response('Unable to send message right now. Please try again later.', 500);
+    exit();
+}
+
+header('Location: ../pages/thank_you.html', true, 303);
+exit();

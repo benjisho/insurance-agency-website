@@ -51,6 +51,14 @@ git push
 ```
 7. Deploy your changes to your web server or hosting platform.
 
+
+## Testing
+
+Run business-logic and behavior tests with:
+
+- JavaScript: `npm run test:js`
+- PHP: `php tests/php/contact_form_handler_test.php`
+
 ## Running with Docker
 
 ### Docker

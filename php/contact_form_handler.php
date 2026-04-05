@@ -60,3 +60,24 @@ function build_contact_email_payload(array $contact): array
         'reply_to' => $safeReplyTo,
     ];
 }
+
+// Execution Logic
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $contact = normalize_contact_input($_POST);
+    $errors = validate_contact_input($contact);
+
+    if (empty($errors)) {
+        // In a real app, you would send an email or save to DB here
+        // For this demo, we'll just redirect to the thank you page
+        header('Location: ../pages/thank_you.php');
+        exit;
+    } else {
+        // Handle errors (e.g., redirect back with error messages)
+        echo "Errors: " . implode(', ', $errors);
+        exit;
+    }
+} else {
+    header('Location: ../pages/contact.php');
+    exit;
+}
+?>

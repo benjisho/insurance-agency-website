@@ -2,8 +2,8 @@ FROM php:7.4-apache
 
 WORKDIR /var/www/html
 
-# Copy index.html and relevant directories
-COPY ../index.html .
+# Copy index.php and relevant directories
+COPY ../index.php .
 COPY ../assets ./assets
 COPY ../pages ./pages
 COPY ../php ./php

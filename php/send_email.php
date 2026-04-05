@@ -46,5 +46,5 @@ if (!mail($to, $payload['subject'], $payload['body'], $headers)) {
     exit();
 }
 
-header('Location: ../pages/thank_you.html', true, 303);
+header('Location: ../pages/thank_you.php', true, 303);
 exit();
